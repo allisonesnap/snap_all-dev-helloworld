@@ -2,7 +2,7 @@ name: all-dev-helloworld
 
 base: core24
 
-version: '1.0'
+version: '1.0.0'
 
 grade: stable
 confinement: strict
