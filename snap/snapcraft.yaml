@@ -35,5 +35,4 @@ parts:
   hello-all360:
     plugin: dump
     source: .
-    stage:
-      - scripts/hello-all360
+

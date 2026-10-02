@@ -1,2 +1,13 @@
 #!/bin/sh
-echo "${message:-Hello from ALL360 OS}"
+
+set -e
+
+MSG_FILE="$SNAP_COMMON/message"
+
+if [ -f "$MSG_FILE" ]; then
+    MSG="$(cat "$MSG_FILE")"
+else
+    MSG="Hello World"
+fi
+
+echo "$MSG"
