@@ -7,6 +7,17 @@ version: '1.0'
 grade: stable
 confinement: strict
 
+
+# --- METADATA FIELDS ---
+license: Proprietary
+title: A chello world snap for ALL
+contact: s.yebbare@all.is.one
+website: https://all.is.one/
+issues: https://github.com/allisonesnap/snap_all-dev-helloworld/issues
+source-code: https://github.com/allisonesnap/snap_all-dev-helloworld
+# ---------------------------------
+
+
 summary: Hello World application for ALL360 OS
 
 description: |
