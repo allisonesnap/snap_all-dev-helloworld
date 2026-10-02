@@ -1,0 +1,25 @@
+name: all-dev-helloworld
+
+base: core24
+
+version: '1.0'
+
+grade: stable
+confinement: strict
+
+summary: Hello World application for ALL360 OS
+
+description: |
+  A simple Hello World application demonstrating
+  strict confinement, runtime configuration,
+  configuration hooks and persistent application data
+  on ALL360 OS.
+
+parts:
+  hello-all360:
+    plugin: dump
+    source: scripts
+
+apps:
+  hello-all360:
+    command: hello-all360

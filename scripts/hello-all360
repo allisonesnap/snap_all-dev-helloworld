@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+CONFIG_FILE="$SNAP_COMMON/config.env"
+
+if [ -f "$CONFIG_FILE" ]; then
+    . "$CONFIG_FILE"
+fi
+
+MESSAGE="${MESSAGE:-Hello from ALL360 OS}"
+
+echo "$MESSAGE"
+echo "Persistent data directory: $SNAP_COMMON"

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+MESSAGE="$(snapctl get message)"
+
+mkdir -p "$SNAP_COMMON"
+
+if [ -n "$MESSAGE" ]; then
+    printf 'MESSAGE=%s\n' "$MESSAGE" > "$SNAP_COMMON/config.env"
+fi
+
+chmod 600 "$SNAP_COMMON/config.env"
