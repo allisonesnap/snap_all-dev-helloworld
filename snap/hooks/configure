@@ -1,13 +1,13 @@
 #!/bin/sh
-
 set -e
-
-MESSAGE="$(snapctl get message)"
 
 mkdir -p "$SNAP_COMMON"
 
-if [ -n "$MESSAGE" ]; then
-    printf 'MESSAGE=%s\n' "$MESSAGE" > "$SNAP_COMMON/config.env"
+message="$(snapctl get message)"
+
+if [ -z "$message" ]; then
+    message="Hello from ALL360 OS"
 fi
 
-chmod 600 "$SNAP_COMMON/config.env"
+printf '%s\n' "$message" > "$SNAP_COMMON/message"
+chmod 600 "$SNAP_COMMON/message"

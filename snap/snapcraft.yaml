@@ -26,11 +26,13 @@ description: |
   configuration hooks and persistent application data
   on ALL360 OS.
 
+apps:
+  hello-all360:
+    command: scripts/hello-all360
+
 parts:
   hello-all360:
     plugin: dump
-    source: scripts
-
-apps:
-  hello-all360:
-    command: hello-all360
+    source: .
+    stage:
+      - scripts/hello-all360
